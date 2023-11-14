@@ -82,7 +82,7 @@ end
 M.restore = function()
   -- Restore windows.
   if vim.fn.filereadable(vim.fn.expand(vim.t.tmp_session_file)) == 1 then
-    vim.cmd('silent wall')
+    vim.cmd('silent! wall')
     local file_name = vim.fn.expand('%:p')
     local saved_position = vim.fn.getcurpos()
 
